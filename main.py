@@ -14,11 +14,11 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='main',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    
+
     ### Basic settings ###
-    
+
     # dataset selection: New York Times (default), arXiv and Yelp Review
-    parser.add_argument('--dataset', default='nyt', choices=['nyt','arxiv','yelp'])
+    parser.add_argument('--dataset', default='nyt', choices=['nyt','arxiv','yelp','amazon'])
     # weak supervision selection: class-related keywords (default) and labeled documents
     parser.add_argument('--sup_source', default='keywords', choices=['keywords', 'docs'])
     # the class tree level to proceed until: None (default) = maximum possible level
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # whether ground truth labels are available for evaluation: All (default, all documents have ground truth for evaluation),
     # Subset (a subset of documents have ground truth for evaluation) and None (no ground truth)
     parser.add_argument('--with_eval', default='All', choices=['All', 'Subset', 'None'])
-    
+
     ### Training settings ###
 
     # mini-batch size for both pre-training and self-training: 256 (default)
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument('--delta', default=0.1, type=float)
     # normalized entropy threshold for blocking: 1.0 (default)
     parser.add_argument('--gamma', default=1.0, type=float)
-    
+
     args = parser.parse_args()
     print(args)
 
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     delta = args.delta
 
     word_embedding_dim = 100
-    
+
     if args.dataset == 'nyt':
         update_interval = 30
         pretrain_epochs = 30
@@ -83,6 +83,13 @@ if __name__ == "__main__":
         max_doc_length = 500
         max_sent_length = 35
         common_words = 5000
+    if args.dataset == 'amazon':
+        update_interval = 60
+        pretrain_epochs = 30
+        self_lr = 5e-3
+        max_doc_length = 25400
+        max_sent_length = 1400
+        common_words = 5000
     decay = 1e-6
 
     if args.sup_source == 'docs':
@@ -93,11 +100,11 @@ if __name__ == "__main__":
         update_interval = args.update_interval
     if args.pretrain_epochs is not None:
         pretrain_epochs = args.pretrain_epochs
-    
+
     x, y, sequences, class_tree, word_counts, vocabulary, vocabulary_inv_list, len_avg, len_std, perm = \
-        load_dataset(args.dataset, sup_source=args.sup_source, common_words=common_words, 
+        load_dataset(args.dataset, sup_source=args.sup_source, common_words=common_words,
                     truncate_doc_len=max_doc_length, truncate_sent_len=max_sent_length, with_eval=args.with_eval)
-    
+
     assert max_doc_length > len_avg, f"max_doc_length should be greater than {len_avg}"
 
     np.random.seed(1234)
@@ -105,7 +112,7 @@ if __name__ == "__main__":
     vocab_sz = len(vocabulary_inv)
 
     print(f'x shape: {x.shape}')
-    
+
     if args.max_level is None:
         max_level = class_tree.get_height()
     else:

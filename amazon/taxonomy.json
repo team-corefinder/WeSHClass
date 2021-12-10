@@ -1,0 +1,360 @@
+{
+  "Health & Personal Care": {
+    "Sports Nutrition": {
+      "Nutrition Bars": {},
+      "Protein": {},
+      "Post-Workout & Recovery": {},
+      "Amino Acids": {},
+      "Weight Gainers": {},
+      "Endurance & Energy": {},
+      "Healthy Snacks & Beverages": {}
+    },
+    "Stationery & Party Supplies": {
+      "Stationery": {},
+      "Gift Wrapping Supplies": {},
+      "Party Supplies": {}
+    },
+    "Baby & Child Care": {
+      "Personal Care": {},
+      "Health Care": {}
+    },
+    "Health Care": {
+      "First Aid": {},
+      "Massage & Relaxation": {},
+      "Cough & Cold": {},
+      "Thermometers": {},
+      "Stimulants": {},
+      "Therapeutic Skin Care": {},
+      "Foot Care": {},
+      "Smoking Cessation": {},
+      "Sleep & Snoring": {},
+      "Allergy, Sinus & Asthma": {},
+      "Alternative Medicine": {},
+      "Stress Reduction": {},
+      "Cold Sore & Fever Blister Treatments": {}
+    },
+    "Personal Care": {
+      "Eye Care": {},
+      "Feminine Care": {},
+      "Ear Care": {},
+      "Body Art": {},
+      "Lip Care": {},
+      "Oral Hygiene": {},
+      "Foot Care": {},
+      "Shaving & Hair Removal": {}
+    },
+    "Vitamins & Dietary Supplements": {
+      "Weight Loss": {},
+      "Vitamins": {},
+      "Supplements": {},
+      "Minerals": {}
+    },
+    "Medical Supplies & Equipment": {
+      "Home Tests": {},
+      "Mobility Aids & Equipment": {},
+      "Respiratory Aids & Accessories": {},
+      "Daily Living Aids": {},
+      "Bathroom Safety, Aids & Accessories": {},
+      "Occupational & Physical Therapy Aids": {},
+      "Bedroom Aids & Accessories": {},
+      "Diabetes Care": {}
+    },
+    "Household Supplies": {
+      "Cleaning Tools": {},
+      "Household Batteries": {},
+      "Laundry": {},
+      "Household Cleaning": {},
+      "Paper & Plastic": {}
+    }
+  },
+  "Beauty": {
+    "Tools & Accessories": {
+      "Mirrors": {},
+      "Hair Coloring Tools": {},
+      "Nail Tools": {},
+      "Makeup Brushes & Tools": {},
+      "Bags & Cases": {}
+    },
+    "Makeup": {
+      "Nails": {},
+      "Makeup Sets": {},
+      "Body": {},
+      "Lips": {},
+      "Eyes": {},
+      "Face": {},
+      "Makeup Palettes": {}
+    },
+    "Bath & Body": {
+      "Sets": {},
+      "Bath": {},
+      "Bathing Accessories": {},
+      "Scrubs & Body Treatments": {}
+    },
+    "Skin Care": {
+      "Eyes": {},
+      "Face": {},
+      "Body": {},
+      "Hands & Nails": {},
+      "Sets & Kits": {},
+      "Sun": {}
+    },
+    "Hair Care": {
+      "Hair Color": {},
+      "Hair Loss Products": {},
+      "Shampoo Plus Conditioner": {},
+      "Hair & Scalp Treatments": {},
+      "Styling Tools": {},
+      "Shampoos": {},
+      "Shampoo & Conditioner Sets": {},
+      "Conditioners": {},
+      "Styling Products": {}
+    }
+  },
+  "Home & Kitchen": {
+    "Bedding": {
+      "Decorative Pillows, Inserts & Covers": {},
+      "Kids' Bedding": {},
+      "Feather Beds": {},
+      "Blankets & Throws": {},
+      "Bedspreads & Coverlets": {},
+      "Shams, Bed Skirts & Bed Frame Draperies": {},
+      "Bedding Accessories": {},
+      "Bedding Collections": {},
+      "Feather Bed Covers": {},
+      "Bed Pillows": {}
+    },
+    "Storage & Organization": {
+      "Laundry Storage & Organization": {},
+      "Home Storage Hooks": {},
+      "Clothing & Closet Storage": {},
+      "Baskets & Bins": {},
+      "Racks, Shelves & Drawers": {},
+      "Bathroom Storage & Organization": {}
+    },
+    "Kitchen & Dining": {
+      "Food Service Equipment & Supplies": {},
+      "Water Coolers & Filters": {},
+      "Kitchen Utensils & Gadgets": {},
+      "Small Appliances": {},
+      "Dining & Entertaining": {},
+      "Kitchen & Table Linens": {},
+      "Storage & Organization": {},
+      "Wine Accessories": {},
+      "Small Appliance Parts & Accessories": {},
+      "Home Brewing & Wine Making": {}
+    },
+    "Heating, Cooling & Air Quality": {
+      "Air Conditioners & Accessories": {},
+      "Space Heaters & Accessories": {},
+      "Household Fans": {}
+    },
+    "Furniture": {
+      "Home Office Furniture": {},
+      "Kitchen & Dining Room Furniture": {},
+      "Bedroom Furniture": {},
+      "Replacement Parts": {},
+      "Bathroom Furniture": {},
+      "Home Entertainment Furniture": {},
+      "Other Furniture": {},
+      "Home Bar Furniture": {},
+      "Living Room Furniture": {},
+      "Kids' Furniture": {}
+    },
+    "Vacuums & Floor Care": {
+      "Carpet Cleaner Accessories": {},
+      "Vacuum Accessories": {},
+      "Steam Cleaners & Accessories": {},
+      "Carpet Cleaners": {},
+      "Vacuums": {}
+    },
+    "Irons & Steamers": {
+      "Irons": {},
+      "Ironing Boards": {},
+      "Ironing Board Covers": {},
+      "Garment Steamer Accessories": {},
+      "Ironing Accessories": {},
+      "Garment Steamers": {}
+    },
+    "Bath": {
+      "Towels": {},
+      "Bathroom Accessories": {},
+      "Bath Rugs": {}
+    }
+  },
+  "Toys & Games": {
+    "Puzzles": {
+      "Pegged Puzzles": {},
+      "Puzzle Accessories": {},
+      "Floor Puzzles": {}
+    },
+    "Games": {
+      "Dice & Gaming Dice": {},
+      "Game Room Games": {},
+      "Trading Card Games": {},
+      "Game Accessories": {},
+      "Game Collections": {},
+      "Tile Games": {},
+      "Board Games": {},
+      "Battling Tops": {},
+      "Card Games": {},
+      "Stacking Games": {},
+      "Standard Playing Card Decks": {},
+      "Floor Games": {},
+      "Travel Games": {}
+    },
+    "Toy Remote Control & Play Vehicles": {
+      "Play Vehicles": {},
+      "Play Trains & Railway Sets": {},
+      "Die-Cast Vehicles": {},
+      "Pull Back Vehicles": {}
+    },
+    "Learning & Education": {
+      "Electronics": {},
+      "Solar": {},
+      "Basic & Life Skills Toys": {},
+      "Early Development Toys": {},
+      "Science": {},
+      "Flash Cards": {},
+      "Habitats": {},
+      "Geography": {},
+      "Musical Instruments": {},
+      "Mathematics & Counting": {},
+      "Reading & Writing": {}
+    },
+    "Stuffed Animals & Plush": {
+      "Teddy Bears": {},
+      "Animals & Figures": {},
+      "Puppets": {},
+      "Plush Pillows": {},
+      "Plush Backpacks & Purses": {},
+      "Plush Puppets": {}
+    },
+    "Arts & Crafts": {
+      "Drawing & Painting Supplies": {},
+      "Easels": {},
+      "Clay & Dough": {},
+      "Beads": {},
+      "Printing & Stamping": {},
+      "Glue, Paste & Tape": {},
+      "Drawing & Sketching Tablets": {},
+      "Craft Kits": {}
+    },
+    "Dress Up & Pretend Play": {
+      "Beauty & Fashion": {},
+      "Pretend Play": {}
+    },
+    "Sports & Outdoor Play": {
+      "Gardening Tools": {},
+      "Sports": {},
+      "Pools & Water Fun": {},
+      "Bubbles": {},
+      "Marble Games": {},
+      "Play Tents & Tunnels": {},
+      "Sand & Water Tables": {},
+      "Play Sets & Playground Equipment": {},
+      "Ball Pits & Accessories": {},
+      "Playhouses": {}
+    },
+    "Novelty & Gag Toys": {
+      "Gag Toys & Practical Jokes": {},
+      "Novelty Games": {},
+      "Flying Toys": {},
+      "Nesting Dolls": {},
+      "Miniatures": {},
+      "Magnets & Magnetic Toys": {},
+      "Spy Gadgets": {},
+      "Wind-up Toys": {},
+      "Light-Up Toys": {},
+      "Toy Balls": {},
+      "Magic Kits & Accessories": {}
+    },
+    "Grown-Up Toys": {
+      "Puzzles": {},
+      "Action & Toy Figures": {},
+      "Games": {},
+      "Novelty & Gag Toys": {}
+    },
+    "Hobbies": {
+      "Models & Model Kits": {},
+      "Coin Collecting": {},
+      "Rockets": {},
+      "Slot Cars, Race Tracks & Accessories": {},
+      "Hobby Building Tools & Hardware": {}
+    },
+    "Party Supplies": {
+      "Balloons": {},
+      "Cake Supplies": {},
+      "Party Favors": {},
+      "Party Hats": {},
+      "Party Games & Crafts": {},
+      "Noisemakers": {},
+      "Party Packs": {}
+    },
+    "Building Toys": {
+      "Building Sets": {},
+      "Gear Sets": {},
+      "Stacking Blocks": {},
+      "Marble Runs": {}
+    },
+    "Electronics for Kids": {
+      "Electronic Pets": {},
+      "Systems & Accessories": {},
+      "Electronic Toys": {},
+      "Personal Video Players & Accessories": {},
+      "Plug & Play Video Games": {}
+    },
+    "Action Figures & Statues": {
+      "Accessories": {},
+      "Action Figures": {}
+    },
+    "Dolls & Accessories": {
+      "Doll Accessories": {},
+      "Dolls": {}
+    }
+  },
+  "Grocery & Gourmet Food": {
+    "Canned, Dry & Packaged Foods": {
+      "Condiments, Pickles & Relishes": {},
+      "Herbs, Spices & Seasonings": {},
+      "Packaged Meals & Side Dishes": {},
+      "Jams, Jellies & Sweet Spreads": {},
+      "Canned & Jarred Food": {}
+    },
+    "Beverages": {
+      "Coffee": {},
+      "Powdered Drink Mixes": {},
+      "Tea": {},
+      "Juices": {},
+      "Meal Replacement Drinks": {},
+      "Energy Drinks": {},
+      "Hot Cocoa": {},
+      "Soda Syrups": {}
+    },
+    "Snack Foods": {
+      "Fruit Leather": {},
+      "Crackers": {},
+      "Fruit Snacks": {}
+    },
+    "Baby Foods": {
+      "Baby Formula": {},
+      "Beverages": {},
+      "Fruit": {}
+    },
+    "Cooking & Baking": {
+      "Cooking Oils, Vinegars & Sprays": {},
+      "Sugar Substitutes": {},
+      "Flours & Meals": {},
+      "Frosting, Icing & Decorations": {},
+      "Nuts & Seeds": {}
+    },
+    "Breakfast Foods": {
+      "Cereals": {},
+      "Breakfast & Cereal Bars": {}
+    },
+    "Candy & Chocolate": {
+      "Chewing Gum": {},
+      "Assortments": {},
+      "Caramels": {}
+    }
+  }
+}
