@@ -97,6 +97,8 @@ class ClassNode(object):
 
     def name2label(self, name):
         target = self.find(name)
+        if not target:
+            print(name)
         assert target
         return target.get_full_label()
 

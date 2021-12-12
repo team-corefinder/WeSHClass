@@ -58,7 +58,8 @@ def labels():
     with open('labels.txt', 'w') as output_file:
       for line in input_file:
         j = json.loads(line)
-        output_file.write("\t".join(j["categories"]) + '\n')
+        categories = j['categories']
+        output_file.write(categories[-1] + '\n')
 
 def sentence_lengths():
   with open('dataset.txt') as f:
@@ -85,7 +86,7 @@ if __name__ == '__main__':
   # dataset()
   # hier()
   # doc_id()
-  # labels()
+  labels()
   # keywords()
   # max_len()
-  max_sentence_len()
+  # max_sentence_len()
