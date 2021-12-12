@@ -87,8 +87,8 @@ if __name__ == "__main__":
         update_interval = 60
         pretrain_epochs = 30
         self_lr = 5e-3
-        max_doc_length = 25400
-        max_sent_length = 1400
+        max_doc_length = 7100
+        max_sent_length = 770
         common_words = 5000
     decay = 1e-6
 

@@ -1,7 +1,7 @@
 import json, re
 
 def dataset():
-  with open('amazon-coreclass-45000.jsonl') as input_file:
+  with open('amazon-coreclass-1000.jsonl') as input_file:
     with open('dataset.txt', 'w') as output_file:
       for line in input_file:
         j = json.loads(line)
@@ -34,7 +34,7 @@ def doc_id():
     taxo = json.load(taxo_file)
     leaves = find_leaves(taxo)
 
-    with open('amazon-coreclass-45000.jsonl') as document_file:
+    with open('amazon-coreclass-1000.jsonl') as document_file:
       docs = [json.loads(l)['categories'] for l in document_file.readlines()]
 
       with open('doc_id.txt', 'w') as output_file:
@@ -54,7 +54,7 @@ def keywords():
 
 
 def labels():
-  with open('amazon-coreclass-45000.jsonl') as input_file:
+  with open('amazon-coreclass-1000.jsonl') as input_file:
     with open('labels.txt', 'w') as output_file:
       for line in input_file:
         j = json.loads(line)
@@ -83,10 +83,10 @@ def find_big_line():
 
 
 if __name__ == '__main__':
-  # dataset()
-  # hier()
-  # doc_id()
+  dataset()
+  hier()
+  doc_id()
   labels()
-  # keywords()
-  # max_len()
-  # max_sentence_len()
+  keywords()
+  max_len()
+  max_sentence_len()
