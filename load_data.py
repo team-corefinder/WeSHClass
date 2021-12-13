@@ -12,6 +12,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, T
 from keras.preprocessing.sequence import pad_sequences
 from tree import ClassNode
 
+nltk.download('punkt')
 
 def read_file(dataset, with_eval="All"):
     class_tree = ClassNode("ROOT",None,-1)
@@ -160,11 +161,12 @@ def extract_keywords(data_path, class_tree, class_type, vocabulary, num_seed_doc
     for line in text:
         line = line.split('\n')[0]
         class_name, doc_ids = line.split('\t')
-        cur_node = class_tree.find(class_name)
-        assert cur_node, f"Class {class_name} not exist in class tree!"
+        cur_nodes = class_tree.find_all(class_name)
+        assert cur_nodes, f"Class {class_name} not exist in class tree!"
         seed_idx = doc_ids.split()
         seed_idx = [int(idx) for idx in seed_idx]
-        cur_node.sup_idx = seed_idx
+        for cur_node in cur_nodes:
+            cur_node.sup_idx = seed_idx
 
     print("Extracted keywords for each class: ")
     max_level = class_tree.get_height()
