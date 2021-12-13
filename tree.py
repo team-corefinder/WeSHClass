@@ -75,19 +75,34 @@ class ClassNode(object):
             if child.find(name):
                 return child.find(name)
         return None
+
+    def find_all(self, name):
+        result = []
+        if type(name) == str:
+            if name == self.name:
+                result.append(self)
+        elif type(name) == int:
+            if name == self.label:
+                result.append(self)
+        for child in self.children:
+            result += child.find_all(name)
+        return result
     
+
     def find_add_child(self, name, node):
         target = self.find(name)
         assert target
         target.add_child(node)
 
     def find_add_keywords(self, name, keywords):
-        target = self.find(name)
-        assert target, f'Class {name} not found!'
-        target.add_keywords(keywords)
+        targets = self.find_all(name)
+        for target in targets:
+            assert target, f'Class {name} not found!'
+            target.add_keywords(keywords)
 
     def aggregate_keywords(self):
         if self.children == []:
+            print(self.name)
             assert self.keywords
         else:
             if self.keywords == []:
