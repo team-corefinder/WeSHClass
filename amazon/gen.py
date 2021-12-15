@@ -1,14 +1,15 @@
 import json, re
 
-def dataset():
-  with open('amazon-coreclass-1000.jsonl') as input_file:
+def dataset(filename):
+  with open(filename) as input_file:
     with open('dataset.txt', 'w') as output_file:
       for line in input_file:
         j = json.loads(line)
         output_file.write(f'{j["reviewText"]}\n')
 
-def to_line(k, v):
-  return '\t'.join([k] + list(v.keys())) + '\n'
+def to_line(k, v, docs):
+  keys = [key for key in v.keys() if [doc for doc in docs if key == doc[0]]]
+  return '\t'.join([k] + keys) + '\n'
 
 def find_leaves(taxo):
   result = []
@@ -19,28 +20,39 @@ def find_leaves(taxo):
       result += find_leaves(v)
   return result
 
-def hier():
+def hier(filename):
   with open('taxonomy.json') as input_file:
     taxo = json.load(input_file)
-    with open('label_hier.txt', 'w') as output_file:
-      output_file.write(to_line('ROOT', taxo))
-      for k, v in taxo.items():
-        output_file.write(to_line(k, v))
-        for kk, vv in v.items():
-          output_file.write(to_line(kk, vv))
+    with open(filename) as document_file:
+      docs = [json.loads(l)['categories'] for l in document_file.readlines()]
+      with open('label_hier.txt', 'w') as output_file:
+        output_file.write(to_line('ROOT', taxo, docs))
+        for k, v in taxo.items():
+          if [d for d in docs if k == d[0]]:
+            child_items = [item for item in v.items() if [d for d in docs if item[0] == d[1]]]
+            if child_items:
+              child_keys = [item[0] for item in child_items]
+              output_file.write('\t'.join([k] + child_keys) + '\n')
+              for kk, vv in child_items:
+                if  [d for d in docs if kk in d]:
+                  child_items = [item for item in vv.items() if [d for d in docs if item[0] == d[2]]]
+                  if child_items:
+                    child_keys = [item[0] for item in child_items]
+                    output_file.write('\t'.join([kk] + child_keys) + '\n')
 
-def doc_id():
+def doc_id(filename):
   with open('taxonomy.json') as taxo_file:
     taxo = json.load(taxo_file)
     leaves = find_leaves(taxo)
 
-    with open('amazon-coreclass-1000.jsonl') as document_file:
+    with open(filename) as document_file:
       docs = [json.loads(l)['categories'] for l in document_file.readlines()]
 
       with open('doc_id.txt', 'w') as output_file:
         for l in leaves:
-          ids = [str(i) for i, categories in enumerate(docs) if l in categories][:10]
-          output_file.write(f'{l}\t{" ".join(ids)}\n')
+          ids = [str(i) for i, categories in enumerate(docs) if l == categories[-1]]
+          if ids:
+              output_file.write(f'{l}\t{" ".join(ids)}\n')
 
 def keywords():
   with open('taxonomy.json') as taxo_file:
@@ -53,8 +65,8 @@ def keywords():
         output_file.write(f'{l}\t{" ".join(words)}\n')
 
 
-def labels():
-  with open('amazon-coreclass-1000.jsonl') as input_file:
+def labels(filename):
+  with open(filename) as input_file:
     with open('labels.txt', 'w') as output_file:
       for line in input_file:
         j = json.loads(line)
@@ -83,10 +95,11 @@ def find_big_line():
 
 
 if __name__ == '__main__':
-  dataset()
-  hier()
-  doc_id()
-  labels()
-  keywords()
+  FILENAME ='amazon-297.jsonl' 
+  dataset(FILENAME)
+  hier(FILENAME)
+  doc_id(FILENAME)
+  labels(FILENAME)
+  # keywords()
   max_len()
   max_sentence_len()

@@ -5,9 +5,14 @@ from gensim.models import word2vec
 from gen import augment, bow_pseudodocs, lstm_pseudodocs
 from keras.optimizers import SGD
 from keras.callbacks import ModelCheckpoint
+from keras.losses import SparseCategoricalCrossentropy
 import pickle
 from sklearn.metrics import f1_score
 from time import time
+
+def loss_fn(y_true, y_pred):
+    print(y_pred)
+    return SparseCategoricalCrossentropy()(y_true, y_pred + 1e-7)
 
 
 def train_lstm(sequences, vocab_sz, truncate_len, save_path, word_embedding_dim=100, hidden_dim=100, embedding_matrix=None):
@@ -23,7 +28,7 @@ def train_lstm(sequences, vocab_sz, truncate_len, save_path, word_embedding_dim=
     from models import LSTMLanguageModel
     model_name = save_path + '/model-final.h5'
     model = LSTMLanguageModel(truncate_len-1, word_embedding_dim, vocab_sz+1, hidden_dim, trim_embedding)
-    model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.compile(loss=loss_fn, optimizer='adam', metrics=['accuracy'])
     if os.path.exists(model_name):
         print(f'Loading model {model_name}...')
         model.load_weights(model_name)
@@ -160,9 +165,17 @@ def proceed_level(x, sequences, wstc, args, pretrain_epochs, self_lr, decay, upd
 
 def f1(y_true, y_pred):
     assert len(y_true) == len(y_pred)
-    f1_macro = f1_score(y_true, y_pred, average='macro')
-    f1_micro = f1_score(y_true, y_pred, average='micro')
-    return f1_macro, f1_micro
+    try:
+        f1_macro = f1_score(y_true, y_pred, average='macro')
+        f1_micro = f1_score(y_true, y_pred, average='micro')
+        return f1_macro, f1_micro
+    except ValueError as ve:
+        with np.printoptions(threshold=np.inf):
+            print(f'y_true: {y_true[0]}')
+            print(f'y_pred: {y_pred[0]}')
+            print(f'y_true: {y_true.shape}')
+            print(f'y_pred: {y_pred.shape}')
+        raise ve
 
 
 def write_output(y_pred, perm, class_tree, write_path):

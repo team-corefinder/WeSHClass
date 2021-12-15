@@ -84,12 +84,12 @@ if __name__ == "__main__":
         max_sent_length = 35
         common_words = 5000
     if args.dataset == 'amazon':
-        update_interval = 60
+        update_interval = 100
         pretrain_epochs = 30
         self_lr = 5e-3
-        max_doc_length = 7100
-        max_sent_length = 770
-        common_words = 5000
+        max_doc_length = 1000
+        max_sent_length = 300
+        common_words = 10000
     decay = 1e-6
 
     if args.sup_source == 'docs':

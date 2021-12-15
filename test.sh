@@ -1,5 +1,5 @@
 
-dataset=nyt
+dataset=yelp
 sup_source=keywords
 
 export CUDA_VISIBLE_DEVICES=5

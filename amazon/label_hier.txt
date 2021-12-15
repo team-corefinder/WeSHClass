@@ -11,11 +11,11 @@ Household Supplies	Cleaning Tools	Household Batteries	Laundry	Household Cleaning
 Beauty	Tools & Accessories	Makeup	Bath & Body	Skin Care	Hair Care
 Tools & Accessories	Mirrors	Hair Coloring Tools	Nail Tools	Makeup Brushes & Tools	Bags & Cases
 Makeup	Nails	Makeup Sets	Body	Lips	Eyes	Face	Makeup Palettes
-Bath & Body	Sets	Bath	Bathing Accessories	Scrubs & Body Treatments
+Bath & Body	Bath	Bathing Accessories	Scrubs & Body Treatments
 Skin Care	Eyes	Face	Body	Hands & Nails	Sets & Kits	Sun
 Hair Care	Hair Color	Hair Loss Products	Shampoo Plus Conditioner	Hair & Scalp Treatments	Styling Tools	Shampoos	Shampoo & Conditioner Sets	Conditioners	Styling Products
 Home & Kitchen	Bedding	Storage & Organization	Kitchen & Dining	Heating, Cooling & Air Quality	Furniture	Vacuums & Floor Care	Irons & Steamers	Bath
-Bedding	Decorative Pillows, Inserts & Covers	Kids' Bedding	Feather Beds	Blankets & Throws	Bedspreads & Coverlets	Shams, Bed Skirts & Bed Frame Draperies	Bedding Accessories	Bedding Collections	Feather Bed Covers	Bed Pillows
+Bedding	Decorative Pillows, Inserts & Covers	Kids' Bedding	Feather Beds	Blankets & Throws	Bedspreads & Coverlets	Shams, Bed Skirts & Bed Frame Draperies	Bedding Accessories	Feather Bed Covers	Bed Pillows
 Storage & Organization	Laundry Storage & Organization	Home Storage Hooks	Clothing & Closet Storage	Baskets & Bins	Racks, Shelves & Drawers	Bathroom Storage & Organization
 Kitchen & Dining	Food Service Equipment & Supplies	Water Coolers & Filters	Kitchen Utensils & Gadgets	Small Appliances	Dining & Entertaining	Kitchen & Table Linens	Storage & Organization	Wine Accessories	Small Appliance Parts & Accessories	Home Brewing & Wine Making
 Heating, Cooling & Air Quality	Air Conditioners & Accessories	Space Heaters & Accessories	Household Fans
@@ -35,7 +35,7 @@ Sports & Outdoor Play	Gardening Tools	Sports	Pools & Water Fun	Bubbles	Marble Ga
 Novelty & Gag Toys	Gag Toys & Practical Jokes	Novelty Games	Flying Toys	Nesting Dolls	Miniatures	Magnets & Magnetic Toys	Spy Gadgets	Wind-up Toys	Light-Up Toys	Toy Balls	Magic Kits & Accessories
 Grown-Up Toys	Puzzles	Action & Toy Figures	Games	Novelty & Gag Toys
 Hobbies	Models & Model Kits	Coin Collecting	Rockets	Slot Cars, Race Tracks & Accessories	Hobby Building Tools & Hardware
-Party Supplies	Balloons	Cake Supplies	Party Favors	Party Hats	Party Games & Crafts	Noisemakers	Party Packs
+Party Supplies	Balloons	Cake Supplies	Party Favors	Party Hats	Party Games & Crafts	Noisemakers
 Building Toys	Building Sets	Gear Sets	Stacking Blocks	Marble Runs
 Electronics for Kids	Electronic Pets	Systems & Accessories	Electronic Toys	Personal Video Players & Accessories	Plug & Play Video Games
 Action Figures & Statues	Accessories	Action Figures
@@ -44,7 +44,7 @@ Grocery & Gourmet Food	Canned, Dry & Packaged Foods	Beverages	Snack Foods	Baby F
 Canned, Dry & Packaged Foods	Condiments, Pickles & Relishes	Herbs, Spices & Seasonings	Packaged Meals & Side Dishes	Jams, Jellies & Sweet Spreads	Canned & Jarred Food
 Beverages	Coffee	Powdered Drink Mixes	Tea	Juices	Meal Replacement Drinks	Energy Drinks	Hot Cocoa	Soda Syrups
 Snack Foods	Fruit Leather	Crackers	Fruit Snacks
-Baby Foods	Baby Formula	Beverages	Fruit
+Baby Foods	Baby Formula	Fruit
 Cooking & Baking	Cooking Oils, Vinegars & Sprays	Sugar Substitutes	Flours & Meals	Frosting, Icing & Decorations	Nuts & Seeds
-Breakfast Foods	Cereals	Breakfast & Cereal Bars
-Candy & Chocolate	Chewing Gum	Assortments	Caramels
+Breakfast Foods	Breakfast & Cereal Bars
+Candy & Chocolate	Chewing Gum	Caramels
